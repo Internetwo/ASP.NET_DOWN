@@ -1,0 +1,18 @@
+系统默认上传文件大小4096KB,如果要上传超过此大小的文件,会出现错误界面等
+
+其实，只要对web.config文件做一下配置，就可以解决。
+
+在配置文件中添加如下代码：
+
+
+<configuration>　　
+  <system.web>
+　　<httpRuntime maxRequestLength="4096" executionTimeout="120"/>
+  </system.web>
+</configuration>
+
+　　说明：
+
+maxRequestLength属性限制文件上传的大小，是以KB为单位的，默认值为4096KB，而最大上限为2097151KB，大约是2GB。
+
+executionTimeout属性限制文件上传的时间，以秒（s）为单位，默认值为90 s，如果您考虑到所设计的Web应用系统上传时间要超过90 s可延长设定值。

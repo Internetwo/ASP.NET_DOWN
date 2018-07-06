@@ -1,0 +1,102 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage_admin.master.cs" Inherits="MasterPage_admin" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>无标题页</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            width: 100%;
+        }
+        .style2
+        {
+            height: 60px;
+            text-align: center;
+            font-family: 微软雅黑;
+            font-size: xx-large;
+        }
+        .style3
+        {
+            height: 48px;
+            text-align: center;
+            font-family: 微软雅黑;
+            font-size: medium;
+        }
+        .style4
+        {
+            width: 240px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+    
+            <table cellpadding="0" cellspacing="0" class="style1">
+                <tr>
+                    <td bgcolor="#33CCFF" class="style2" colspan="2" 
+                        style="border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: #000000">
+                        WAYN购物中心-后台管理</td>
+                </tr>
+                <tr>
+                    <td bgcolor="#33CCFF" class="style3" colspan="2">
+                        <asp:LinkButton ID="LinkButton1" runat="server">前台首页</asp:LinkButton>
+&nbsp;&nbsp;&nbsp;
+                        <asp:LinkButton ID="LinkButton2" runat="server">管理员登录</asp:LinkButton>
+&nbsp;&nbsp;&nbsp;
+                        <asp:LinkButton ID="LinkButton3" runat="server">后台首页</asp:LinkButton>
+&nbsp;&nbsp;&nbsp;
+                        <asp:LinkButton ID="LinkButton4" runat="server">退出</asp:LinkButton>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="style4" 
+                        style="border-right-style: solid; border-right-width: thin; border-right-color: #000000">
+                        <asp:TreeView ID="TreeView1" runat="server" ImageSet="Simple">
+                            <ParentNodeStyle Font-Bold="False" />
+                            <HoverNodeStyle Font-Underline="True" ForeColor="#5555DD" />
+                            <SelectedNodeStyle Font-Underline="True" ForeColor="#5555DD" 
+                                HorizontalPadding="0px" VerticalPadding="0px" />
+                            <Nodes>
+                                <asp:TreeNode Text="个人信息管理" Value="个人信息管理">
+                                    <asp:TreeNode Text="修改密码" Value="修改密码"></asp:TreeNode>
+                                    <asp:TreeNode Text="修改基本信息" Value="修改基本信息"></asp:TreeNode>
+                                </asp:TreeNode>
+                                <asp:TreeNode Text="供货商信息管理" Value="供货商信息管理">
+                                    <asp:TreeNode Text="添加供货商" Value="添加供货商"></asp:TreeNode>
+                                    <asp:TreeNode Text="管理供货商" Value="管理供货商"></asp:TreeNode>
+                                </asp:TreeNode>
+                                <asp:TreeNode Text="产品信息管理" Value="产品信息管理">
+                                    <asp:TreeNode Text="添加新产品" Value="添加新产品"></asp:TreeNode>
+                                    <asp:TreeNode Text="管理产品信息" Value="管理产品信息"></asp:TreeNode>
+                                </asp:TreeNode>
+                                <asp:TreeNode Text="产品类别管理" Value="产品类别管理">
+                                    <asp:TreeNode Text="添加产品分类" Value="添加产品分类"></asp:TreeNode>
+                                    <asp:TreeNode Text="管理产品分类" Value="管理产品分类"></asp:TreeNode>
+                                </asp:TreeNode>
+                                <asp:TreeNode Text="订单管理" Value="订单管理"></asp:TreeNode>
+                            </Nodes>
+                            <NodeStyle Font-Names="Tahoma" Font-Size="10pt" ForeColor="Black" 
+                                HorizontalPadding="0px" NodeSpacing="0px" VerticalPadding="0px" />
+                        </asp:TreeView>
+                    </td>
+                    <td style="text-align: center" valign="middle">
+                        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder>&nbsp;</td>
+                </tr>
+            </table>
+            <footer>
+			<div class="text-center copyright" align="center"><p>Copyright © <a href="http://www.wayn.top"  target="_blank">WAYN沃云计算机网络科技Group</a>. All rights reserved.互联网信息服务备案登记证号：<a href="http://www.miitbeian.gov.cn"  target="_blank">滇ICP备17004682号</a></p>
+<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=53011102000392"style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
+<img src="images/batb.png" style="float:left;"/>
+<p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">滇公网安备 53011102000392</p></a>
+            </div>
+		    </footer>
+    </div>
+    </form>
+</body>
+</html>

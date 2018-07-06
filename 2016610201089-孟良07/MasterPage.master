@@ -1,0 +1,145 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>WAYN购物中心</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style4
+        {
+            width: 100%;
+            border-style: solid;
+            border-width: 1px;
+        }
+        .style7
+        {
+            font-size: xx-large;
+            color: #FFFFFF;
+            font-weight: bold;
+            height: 89px;
+            text-align: center;
+            text-decoration:none;
+        }
+        .style8
+        {
+            height: 53px;
+            text-align: center;
+            background-color: #FFFFFF;
+        }
+        .style10
+        {
+            width: 162px;
+            height: 89px;
+        }
+        .style11
+        {
+            width: 162px;
+            height: 414px;
+            background-color: #FFFFFF;
+            color: #CCFFCC;
+        }
+        .style12
+        {
+            height: 414px;
+        }
+        .style15
+        {
+            color: #000000;
+        }
+        .copyright
+        {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        
+            <table align="center" cellpadding="0" cellspacing="0" class="style4">
+                <tr>
+                    <td class="style10">
+                        <asp:Image ID="Image1" runat="server" Height="95px" 
+                            ImageUrl="~/images/Lighthouse.jpg" Width="162px" />
+                    </td>
+                    <td class="style7" style="background-color: #FFFFFF">
+                        <span class="style15">WAYN购物中心</span>
+                        <asp:TextBox ID="TextBox1" runat="server" placeholder="请输入搜索关键词"></asp:TextBox>
+&nbsp;<asp:Button ID="Button1" runat="server" Text="搜索" BackColor="#FF6666" 
+                            style="color: #FFFFFF; background-color: #333333;" 
+                            onclick="Button1_Click" />
+                            &nbsp;&nbsp;
+                        <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="False" 
+                            style="font-family: 黑体; font-size: large" onclick="LinkButton1_Click" >登录</asp:LinkButton>
+&nbsp;&nbsp;
+                        <asp:LinkButton ID="LinkButton2" runat="server" 
+                            style="font-family: 黑体; font-size: large" CausesValidation="False" 
+                            onclick="LinkButton2_Click" >注册</asp:LinkButton>
+&nbsp;&nbsp;&nbsp;&nbsp;
+                            </td>
+                </tr>
+                <tr>
+                    <td class="style11">
+                        <asp:TreeView ID="TreeView1" runat="server" ImageSet="Simple" 
+                            BorderColor="White" ForeColor="White">
+                            <ParentNodeStyle Font-Bold="False" />
+                            <HoverNodeStyle Font-Underline="True" ForeColor="#5555DD" />
+                            <SelectedNodeStyle Font-Underline="True" ForeColor="#5555DD" 
+                                HorizontalPadding="0px" VerticalPadding="0px" />
+                            <Nodes>
+                                <asp:TreeNode Text="服装" Value="新建节点">
+                                    <asp:TreeNode Text="男装" Value="手链"></asp:TreeNode>
+                                    <asp:TreeNode Text="女装" Value="戒指"></asp:TreeNode>
+                                    <asp:TreeNode Text="童装" Value="项链"></asp:TreeNode>
+                                </asp:TreeNode>
+                                <asp:TreeNode Text="家电" Value="流行区">
+                                    <asp:TreeNode Text="洗衣机" Value="首饰"></asp:TreeNode>
+                                    <asp:TreeNode Text="冰箱" Value="项链"></asp:TreeNode>
+                                    <asp:TreeNode Text="彩电" Value="精美头饰"></asp:TreeNode>
+                                </asp:TreeNode>
+                                <asp:TreeNode Text="饮食" Value="饮食">
+                                    <asp:TreeNode Text="水果" Value="水果"></asp:TreeNode>
+                                    <asp:TreeNode Text="零食" Value="零食"></asp:TreeNode>
+                                    <asp:TreeNode Text="大米" Value="大米"></asp:TreeNode>
+                                </asp:TreeNode>
+                                <asp:TreeNode Text="首饰" Value="家电">
+                                    <asp:TreeNode Text="手镯" Value="电视"></asp:TreeNode>
+                                    <asp:TreeNode Text="项链" Value="冰箱"></asp:TreeNode>
+                                    <asp:TreeNode Text="戒指" Value="洗衣机"></asp:TreeNode>
+                                </asp:TreeNode>
+                                <asp:TreeNode Text="手机" Value="手机">
+                                    <asp:TreeNode Text="oppo" Value="oppo"></asp:TreeNode>
+                                    <asp:TreeNode Text="vivo" Value="vivo"></asp:TreeNode>
+                                    <asp:TreeNode Text="华为" Value="华为"></asp:TreeNode>
+                                    <asp:TreeNode Text="小米" Value="小米"></asp:TreeNode>
+                                </asp:TreeNode>
+                            </Nodes>
+                            <NodeStyle Font-Names="Tahoma" Font-Size="10pt" ForeColor="Black" 
+                                HorizontalPadding="0px" NodeSpacing="0px" VerticalPadding="0px" />
+                        </asp:TreeView>
+                        <asp:ContentPlaceHolder id="ContentPlaceHolder2" runat="server">
+    </asp:ContentPlaceHolder><br />
+                    </td>
+                    <td class="style12" valign="top">
+                        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="style8" colspan="2">
+                        &nbsp;</td>
+                </tr>
+            </table>
+            <footer>
+			<div class="text-center copyright"><p>Copyright © <a href="http://www.wayn.top"  target="_blank">WAYN沃云计算机网络科技Group</a>. All rights reserved.互联网信息服务备案登记证号：<a href="http://www.miitbeian.gov.cn"  target="_blank">滇ICP备17004682号</a></p>
+<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=53011102000392"style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
+<img src="images/batb.png" style="float:left;"/>
+<p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">滇公网安备 53011102000392</p></a>
+            </div>
+		    </footer>
+    </div>
+    </form>
+</body>
+</html>
